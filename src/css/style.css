@@ -1,107 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins";
+    width: 1500px;
 }
 
+.titulo{
+    padding: 10px;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25);}
+h1{
+    padding: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
 /* CABEÇALHO */
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 .filtersContainer {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 30px;
+    padding: 30px 30px 30px 0px;
+}
+
+.filtersContainer button {
+    margin-right: 12px;
+}
+
+.containerBuscaPorNome{
+    display: flex;
+    margin-left: 160px;
+   
 }
 
 .estiloGeralBotoes{
-    border: none;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 14px 26px;
     cursor: pointer;
     display: block;
-    font-size: 0.9rem;
+    font-size: 14px;
+    background-color: rgba(18, 184, 134, 0.05);
+    color: rgba(18, 184, 134, 1);
+    border: 1.5px solid rgba(18, 184, 134, 0.05);
+    font-family: "Poppins";
+    transition: 0.3s;
+}
+.estiloGeralBotoes:hover{
+    background-color: rgba(18, 184, 134, 1);
+    color: #FFFFFF;
 }
 
-.estiloGeralBotoes--mostrarTodos {
-    color: black;
-    background-color: #d3d3d3;
-}
-
-.estiloGeralBotoes--filtrarHortifruti {
-    background-color: tomato;
-    color: white;
-}
-
-.containerBuscaPorNome {
-    display: flex;
-    justify-content: space-between;
-}
 
 .campoBuscaPorNome {
-    border-radius: 5px 0 0 5px;
-    border: 1px solid black;
-    padding: 0 10px;
+    margin-right: 9px;
+    border-radius: 8px;
+    padding:14px 105px 14px 20px;
+    border: none;
+    background-color: rgba(241, 243, 245, 1);
+    color: rgba(81, 82, 82, 1);
+    font-size: 16px;
 }
 
 .estiloGeralBotoes--botaoBuscaPorNome {
-    background-color: rgb(17, 17, 20);
+    display: flex;
+    padding: 14px;
+    background-color: rgba(18, 184, 134, 1);
     color: white;
-    border-radius: 0 5px 5px 0;
+    border-radius: 8px;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* CONTEÚDO */
-main{}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .containerListaProdutos {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+    width: 1163px;
+    
 }
 
 .containerListaProdutos ul {
     list-style: none;
-    text-align: center;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .containerListaProdutos ul li {
     color: black;
     font-weight: bold;
-    padding: 20px;
-    margin: 10px;
     border-radius: 5px;
     transition: ease-in-out .1s;
-    width: 20%;
+    margin-bottom: 54px;
+    padding: 0px 8px;
+
 }
 
-.containerListaProdutos ul li:hover {
-    box-shadow: 3px 3px 13px 1px rgb(146 146 146);
-}
+
 
 .containerListaProdutos ul li img {
-    width: 100%;
-    max-width: 80px;
+    width: 274px;
+    height: 175px;
 }
 
 .containerListaProdutos ul li h3 {
-    font-size: 1.5rem;
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .containerListaProdutos ul li p {
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 16px;
+
 }
 .containerListaProdutos ul li span {
-    font-size: 0.8rem;
+    font-size: 12px;
+    color: #868E96;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 16px;
     display: inline-block;
 }
 
+
+
+
+
+
+
+
+
+
 /* PREÇO TOTAL */
 .containerPrecoTotal{
-    text-align: center;
+    box-shadow: 0px 5px 30px -5px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 54px;
 }
+
 .containerPrecoTotal p{
-    font-size: 1.4rem;
-    font-weight: 600;
+    width: 1100px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    margin-left: 13px;
 }
-.containerPrecoTotal p span{}
+.containerPrecoTotal p span{
+    background-color: rgba(33, 37, 41, 1);
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 8px;
+}

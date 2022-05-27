@@ -145,6 +145,7 @@ function montarListaProdutos(listaProdutos) {
 
     listaProdutos.forEach((produto) => {
     ...
+})
 }
 ```
 

@@ -12,41 +12,44 @@
 
     <!-- CABEÇALHO -->
     <header>
-        <div id="filters" class="filtersContainer">
-            
-            <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Mostrar Todos</button>
-            <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Mostrar Hortifruti</button>
-
+        <div class="titulo">
+            <h1>Shop now</h1>
+        </div>
+        <div class="cont">
+            <div id="filters" class="filtersContainer">
+                
+                <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">Todos Produtos</button>
+                <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">Hortifruti</button>
+                <button class="estiloGeralBotoes estiloGeralBotoes--filtrarPanificadora">Panificadora</button>
+                <button class="estiloGeralBotoes estiloGeralBotoes--filtrarLaticinios">Laticínios</button>
+    
+    
+            </div>
             <div class="containerBuscaPorNome">
                 
-                <input type="text" placeholder="Nome do produto" class="campoBuscaPorNome">
-                <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">Buscar</button>
-
+                <input type="text" placeholder="Pesquisar por" class="campoBuscaPorNome">
+                <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"><img src="./src/img/search.png" alt=""></button>
+    
             </div>
+
         </div>
     </header>
     
     <main>
         <div class="containerListaProdutos" id="listProdutos">
+            <div class="containerPrecoTotal">
+                <div class="alert">
+                    <img src="./src/img/alert-circle.png" alt="">
+                </div>
+                <p>Valor total dos produtos da sessão selecionada
+                    <span id="precoTotal">R$ 00.00</span>
+                </p>
+            </div>
             <ul>
-            <!-- Utilize esse item html como template para a construção da lista de produtos -->
-
-            <!-- Você pode remover esses comentários depois que fizer a construção pelo DOM -->
-
-            <!--
-                <li>
-                    <img src="./src/img/maça.png" alt="Imagem maçã">
-                    <h3>Maçã</h3>
-                    <p>R$02.00</p>
-                    <span>Seção - Hortifruti</span>
-                </li>
-            -->
+                
             </ul>
         </div>
 
-        <div class="containerPrecoTotal">
-            <p>Preço total: R$<span id="precoTotal">00.00</span></p>
-        </div>
     </main>
 
     <script src="src/js/dataProdutos.js"></script>
