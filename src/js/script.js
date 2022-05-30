@@ -113,3 +113,5 @@ function filtrarCampoDeBusca(){
 }
 
 botaoCampoDeBusca.addEventListener("click", filtrarCampoDeBusca)
+
+mostrarProdutos(produtos)
