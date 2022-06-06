@@ -1,302 +1,599 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-body {
-    font-family: "Poppins";
-    width: 1500px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-.titulo{
-    padding: 10px;
-    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25);}
+@media (max-width: 320px) {
+    body {
+      font-family: "Poppins";
+      width: 100%;
+    }
+    .titulo {
+      box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25);
+    }
+    h1 {
+      padding: 20px;
+      font-weight: 600;
+      text-align: center;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    .cont {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 30px;
+      margin-bottom: 50px;
+    }
+    .filtersContainer {
+      display: flex;
+      overflow: scroll;
+      overflow-y: hidden;
+      padding-bottom: 15px;
+      width: 95%;
+    }
+    .filtersContainer button {
+      margin-right: 12px;
+    }
+    .estiloGeralBotoes {
+      font-weight: 500;
+      border-radius: 8px;
+      padding: 4px 26px;
+      font-size: 14px;
+      background-color: rgba(18, 184, 134, 0.05);
+      color: rgba(18, 184, 134, 1);
+      border: 1.5px solid rgba(18, 184, 134, 0.05);
+      font-family: "Poppins";
+      transition: 0.3s;
+    }
+    .estiloGeralBotoes:hover {
+      background-color: rgba(18, 184, 134, 1);
+      color: #ffffff;
+    }
+    .containerBuscaPorNome {
+      display: flex;
+      margin-top: 15px;
+      width: 95%;
+    }
+    .campoBuscaPorNome {
+      margin-right: 9px;
+      border-radius: 8px;
+      padding:14px 30px 14px 20px;
+      border: none;
+      background-color: rgb(241, 243, 245);
+      color: rgba(81, 82, 82, 1);
+      font-size: 16px;
+  }
+  .estiloGeralBotoes--botaoBuscaPorNome {
+      display: flex;
+      padding: 14px;
+      background-color: rgba(18, 184, 134, 1);
+      color: white;
+      border-radius: 8px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .containerListaProdutos {
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .vitrine{
+      display: flex;
+      overflow: scroll;
+  }
+  .cardProduto{
+      border-radius: 5px;
+      margin-right: 17px;
+      margin-bottom: 11px;
+  }
+  .cardImg{
+      width: 274px;
+      height: 175px;
+  }
+  .cardTitulo{
+      color: #212529;
+      font-weight: 500;
+      margin: 16px 0;
+      font-size: 16px;
+  }
+  .cardCategoria{
+      font-size: 12px;
+      color: #868E96;
+      font-weight: 500;
+  }
+  .cardLista{
+      margin: 16px 13px;
+      font-size: 12px;
+      color: #868E96;
+      font-weight: 500;
+      list-style: decimal;
+      height: 65px;
+  }
+  .cardLi{
+      padding: 2px;
+  }
+  .divBotao{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .divBotao p{
+      font-weight: 500;
+      font-size: 14px;
+  }
+  .botaoComprar{
+      color: #12B886;
+      background-color: rgba(18, 184, 134, 0.05);
+      padding: 8px;
+      border-radius: 8px;
+      border: 1.5px solid rgba(18, 184, 134, 0.05);
+      cursor: pointer;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .menuLateral{
+      display: flex;
+      flex-direction: column;
+      width: 290px;
+      height: 260px;
+      margin-top: 10px;
+  }
+  .carrinhoTitulo{
+      display: flex;
+      background-color: #12B886;
+      color: #FFFFFF;
+      border-radius: 12px 12px 0 0;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+  }
+  .imgCarrinho{
+      padding: 20px;
+  }
+  .carrinhoTitulo p{
+      font-size: 16px;
+      font-weight: 500;
+  }
+  
+  .containerC{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding-top: 20px;
+      flex-direction: column;
+      overflow: scroll;
+      overflow-x: hidden;
+  }
+  .produtoCarrinho{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  }
+  .divProduto{
+      display: flex;
+  }
+  .imgProduto{
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+  }
+  .infoCarrinho{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-left: 12px;
+  }
+  .tituloCarrinho{
+      color: #212529;
+      font-weight: 500;
+      font-size: 16px;
+  }
+  .categoriaCarrinho{
+      color: #868E96;
+      font-weight: 400;
+      font-size: 12px;
+  }
+  .pValor{
+      color: #212529;
+      font-weight: 500;
+      font-size: 14px;
+  }
+  .botaoRemover{
+      height: 20px;
+      background-color: #FFFFFF;
+      border: none;
+      cursor: pointer;
+  }
+  .iconeBotao{
+      width: 12px;
+      height: 15px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .containerQuantidade{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 59px;
+      background-color: #F8F9FA;
+  }
+  .divQuantidade, .divTotal{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px;
+  
+  }
+  .containerPrecoTotal{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 59px;
+  }
+  .quantidade,#quantidadeTotal,.totalSoma,#precoTotal{
+      font-size: 14px;
+      font-weight: 400;
+  }
+  
+  }
 
-h1{
-    padding: 10px;
-    font-weight: 600;
-    text-align: center;
-}
-
-
-
-
-
-
-
-
-/* CABEÇALHO */
-.cont{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+@media (min-width: 321px) {
+    body {
+        font-family: "Poppins";
+        width: 100%;
+    }
+    
+    .titulo{
+        box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.25);}
+    
+    h1{
+        padding: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /* CABEÇALHO */
+    
+    .cont{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+    .filtersContainer {
+        display: flex;
+    }
+    
+    .filtersContainer button {
+        margin-right: 12px;
+    }
+    .containerBuscaPorNome{
+        display: flex;
+       
+    }
+    .estiloGeralBotoes{
+        font-weight: 500;
+        border-radius: 8px;
+        padding: 14px 26px;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: rgba(18, 184, 134, 0.05);
+        color: rgba(18, 184, 134, 1);
+        border: 1.5px solid rgba(18, 184, 134, 0.05);
+        font-family: "Poppins";
+        transition: 0.3s;
+    }
+    .estiloGeralBotoes:hover{
+        background-color: rgba(18, 184, 134, 1);
+        color: #FFFFFF;
+    }
+    .campoBuscaPorNome {
+        margin-right: 9px;
+        border-radius: 8px;
+        padding:14px 105px 14px 20px;
+        border: none;
+        background-color: rgb(241, 243, 245);
+        color: rgba(81, 82, 82, 1);
+        font-size: 16px;
+    }
+    .estiloGeralBotoes--botaoBuscaPorNome {
+        display: flex;
+        padding: 14px;
+        background-color: rgba(18, 184, 134, 1);
+        color: white;
+        border-radius: 8px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* CONTEÚDO*/
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .containerListaProdutos {
+        width: 82%;
+        display: flex;
+        
+    }
+    
+    
+    
+    
+    
+    /* CARRINHO LATERAL */
+    
+    .menuLateral{
+        display: flex;
+        flex-direction: column;
+        width: 290px;
+        height: 524px;
+    
+    }
+    .carrinhoTitulo{
+        display: flex;
+        background-color: #12B886;
+        color: #FFFFFF;
+        border-radius: 12px 12px 0 0;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+    }
+    .imgCarrinho{
+        padding: 20px;
+    }
+    .carrinhoTitulo p{
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    
+    
+    
+    
+    .containerC{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+        flex-direction: column;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    .containerC::-webkit-scrollbar{
+        background-color: #FFFFFF;
+        border-radius: 10px;
+    
+    }
+    .containerC::-webkit-scrollbar-thumb{
+        background-color: rgb(211, 214, 217);
+        border-radius: 10px;
+    }
+    .produtoCarrinho{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .divProduto{
+        display: flex;
+    }
+    .imgProduto{
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+    }
+    .infoCarrinho{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 12px;
+    }
+    .tituloCarrinho{
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .categoriaCarrinho{
+        color: #868E96;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    .pValor{
+        color: black;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .botaoRemover{
+        height: 20px;
+        background-color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+    }
+    .iconeBotao{
+        width: 12px;
+        height: 15px;
+    }
+    
+    
+    
+    
+    /* VITRINE DE PRODUTOS */
+    .vitrine{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .cardProduto{
+        color: black;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 0px 17px 54px 0px;
+        
+    }
+    .cardImg{
+        width: 274px;
+        height: 175px;
+    }
+    .cardTitulo{
+        margin: 16px 0;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .cardCategoria{
+        font-size: 12px;
+        color: #868E96;
+        font-weight: 500;
+    }
+    
+    .cardLista{
+        margin: 16px 12px;
+        font-size: 12px;
+        color: #868E96;
+        font-weight: 500;
+        list-style: decimal;
+        height: 65px;
+    }
+    .cardLi{
+        padding: 2px;
+    }
+    .divBotao{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .divBotao p{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .botaoComprar{
+        color: #12B886;
+        background-color: rgba(18, 184, 134, 0.05);
+        padding: 8px;
+        border-radius: 8px;
+        border: 1.5px solid rgba(18, 184, 134, 0.05);
+        cursor: pointer;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* PREÇO TOTAL */
+    .containerQuantidade{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 59px;
+        background-color: #F8F9FA;
+    }
+    .divQuantidade, .divTotal{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+    
+    }
+    .containerPrecoTotal{
+        display: flex;
+        align-items: center;
+        width: 290px;
+        height: 59px;
+    }
+    .quantidade,#quantidadeTotal,.totalSoma,#precoTotal{
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
     
 }
-.filtersContainer {
-    display: flex;
-    padding: 30px 30px 30px 0px;
+
+@media (max-width: 1064px){
+    .vitrine{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: scroll;
+        overflow-y: hidden;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    .menuLateral{
+        margin-left: 20px;
+    }
 }
 
-.filtersContainer button {
-    margin-right: 12px;
+@media (max-width: 974px){
+    .cont{
+        display: flex;
+        flex-wrap: wrap;
+    }
+   .containerBuscaPorNome{
+       margin-top: 10px;
+   }
+   .campoBuscaPorNome{
+       padding: 14px 105px 14px 20px;;
+   }
 }
-.containerBuscaPorNome{
-    display: flex;
-    margin-left: 160px;
-   
-}
-.estiloGeralBotoes{
-    font-weight: 500;
-    border-radius: 8px;
-    padding: 14px 26px;
-    cursor: pointer;
-    display: block;
-    font-size: 14px;
-    background-color: rgba(18, 184, 134, 0.05);
-    color: rgba(18, 184, 134, 1);
-    border: 1.5px solid rgba(18, 184, 134, 0.05);
-    font-family: "Poppins";
-    transition: 0.3s;
-}
-.estiloGeralBotoes:hover{
-    background-color: rgba(18, 184, 134, 1);
-    color: #FFFFFF;
-}
-.campoBuscaPorNome {
-    margin-right: 9px;
-    border-radius: 8px;
-    padding:14px 105px 14px 20px;
-    border: none;
-    background-color: rgba(241, 243, 245, 1);
-    color: rgba(81, 82, 82, 1);
-    font-size: 16px;
-}
-.estiloGeralBotoes--botaoBuscaPorNome {
-    display: flex;
-    padding: 14px;
-    background-color: rgba(18, 184, 134, 1);
-    color: white;
-    border-radius: 8px;
-}
-
-
-
-
-
-
-
-
-
-
-/* CONTEÚDO*/
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.containerListaProdutos {
-    width: 1163px;
-    display: flex;
-    justify-content: space-between;
-    
-}
-
-
-
-
-
-/* CARRINHO LATERAL */
-.menuLateral{
-    display: flex;
-    flex-direction: column;
-    width: 290px;
-    height: 524px;
-
-}
-.carrinhoTitulo{
-    display: flex;
-    background-color: #12B886;
-    color: #FFFFFF;
-    border-radius: 12px 12px 0 0;
-    align-items: center;
-    height: 50px;
-
-}
-.imgCarrinho{
-    padding: 20px;
-}
-.carrinhoTitulo p{
-    font-size: 16px;
-    font-weight: 500;
-}
-.imgSacola{
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: 3rem ;
-}
-.divItemCarrinho{
-    color: #868E96;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-
-
-
-.containerC{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
-    flex-direction: column;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-.produtoCarrinho{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-.divProduto{
-    display: flex;
-}
-.imgProduto{
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-}
-.infoCarrinho{
-    display: flex;
-    flex-direction: column;
-    height: 70px;
-    justify-content: space-between;
-    margin-left: 12px;
-}
-.tituloCarrinho{
-    color: black;
-    font-weight: 500;
-    font-size: 14px;
-}
-.categoriaCarrinho{
-    color: #868E96;
-    font-weight: 400;
-    font-size: 12px;
-}
-.pValor{
-    color: black;
-    font-weight: 400;
-    font-size: 14px;
-}
-.botaoRemover{
-    height: 20px;
-    background-color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
-.iconeBotao{
-    width: 12px;
-    height: 15px;
-}
-
-
-
-
-/* VITRINE DE PRODUTOS */
-.vitrine{
-    display: flex;
-    flex-wrap: wrap;
-    width: 55rem;
-}
-.cardProduto{
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 0px 17px 34px 0px;
-    
-}
-.cardImg{
-    width: 274px;
-    height: 175px;
-}
-.cardTitulo{
-    margin-top: 16px;
-    font-size: 16px;
-    font-weight: 500;
-}
-.cardCategoria{
-    font-size: 12px;
-    color: #868E96;
-    font-weight: 500;
-    margin-top: 16px;
-    display: flex;
-}
-
-.cardLista{
-    margin-top: 16px;
-    font-size: 12px;
-    color: #868E96;
-    font-weight: 500;
-    list-style: decimal;
-    height: 65px;
-}
-.cardLi{
-    padding: 2px;
-    margin-left: 12px;
-}
-.divBotao{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 6px;
-}
-.divBotao p{
-    font-weight: 500;
-    font-size: 14px;
-}
-.botaoComprar{
-    color: #12B886;
-    background-color: rgba(18, 184, 134, 0.05);
-    padding: 8px;
-    border-radius: 8px;
-    border: 1.5px solid rgba(18, 184, 134, 0.05);
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-/* PREÇO TOTAL */
-.containerQuantidade{
-    display: flex;
-    align-items: center;
-    width: 290px;
-    height: 59px;
-    background-color: #F8F9FA;
-}
-.divQuantidade, .divTotal{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-
-}
-.containerPrecoTotal{
-    display: flex;
-    align-items: center;
-    width: 290px;
-    height: 59px;
-}
-.quantidade,#quantidadeTotal,.totalSoma,#precoTotal{
-    font-size: 14px;
-   
-    font-weight: 400;
-}
-
-
