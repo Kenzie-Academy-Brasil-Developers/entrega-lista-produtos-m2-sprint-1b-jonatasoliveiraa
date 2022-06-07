@@ -58,6 +58,7 @@
       display: flex;
       justify-content: center;
       width: 95%;
+      margin-top: 15px;
     }
     .campoBuscaPorNome {
       margin-right: 9px;
@@ -867,7 +868,7 @@
     }
   
   }
-  
+
   @media (min-width: 1075px) and (max-width: 2440px){
     body {
         font-family: "Poppins";
